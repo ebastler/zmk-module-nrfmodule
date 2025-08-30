@@ -1,0 +1,10 @@
+file_format: "1"
+id: nrfmodule
+name: nrfmodule
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://geon.works/
+exposes: [nrfmodule]

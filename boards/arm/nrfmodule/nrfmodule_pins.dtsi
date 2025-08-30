@@ -1,0 +1,45 @@
+/*
+ * Copyright (c) 2025 Moritz Plattner
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+    nrfmodule: connector {
+        compatible = "nrfmodule";
+        #gpio-cells = <2>;
+        gpio-map-mask = <0xffffffff 0xffffffc0>;
+        gpio-map-pass-thru = <0 0x3f>;
+        gpio-map
+            = <1 0 &gpio0 27 0>     // B1
+            , <2 0 &gpio0 12 0>     // B2
+            , <3 0 &gpio1 09 0>     // B3
+            , <4 0 &gpio0 15 0>     // B4
+            , <5 0 &gpio0 04 0>     // B5  
+            , <6 0 &gpio1 08 0>     // B6
+            , <7 0 &gpio0 26 0>     // B7
+            , <8 0 &gpio0 19 0>     // B8
+            , <9 0 &gpio0 25 0>     // B9
+            , <10 0 &gpio1 06 0>    // B10
+            , <11 0 &gpio1 02 0>    // B11
+            , <12 0 &gpio1 04 0>    // B12
+            , <13 0 &gpio0 05 0>    // B13
+            , <14 0 &gpio0 07 0>    // B14
+            , <15 0 &gpio0 06 0>    // B15
+            , <16 0 &gpio0 8 0>     // B16 - Integrated pull-up
+            , <17 0 &gpio0 11 0>    // B17 - Integrated pull-up
+            , <20 0 &gpio0 21 0>    // B20
+            , <21 0 &gpio0 17 0>    // B21
+            , <22 0 &gpio0 24 0>    // B22
+            , <23 0 &gpio0 13 0>    // B23
+            , <29 0 &gpio1 15 0>    // A5
+            , <30 0 &gpio0 10 0>    // A6
+            , <31 0 &gpio0 09 0>    // A7
+            , <32 0 &gpio0 30 0>    // A8
+            , <33 0 &gpio0 03 0>    // A9
+            , <45 0 &gpio1 14 0>    // A21
+            ;
+    };
+};
+
+nrfmodule_i2c: &i2c0 {};
